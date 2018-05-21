@@ -1,0 +1,136 @@
+                                            /* Basic nodes */
+.button{
+    -fx-background-radius: 15;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(32, 32, 32, 0.7), 3, 0, 1, 1);
+}
+.button-exercise{
+    -fx-effect: dropshadow(three-pass-box, rgba(32, 32, 32, 0.7), 8, 0, 3, 3);
+}
+.button:focused{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+.text-field{
+    -fx-effect: innershadow(three-pass-box, rgba(111, 111, 111, 0.7), 5, 0, 1, 1);
+    -fx-wrap-text: true;
+}
+.text-area{
+    -fx-effect: innershadow(three-pass-box, rgba(111, 111, 111, 0.7), 5, 0, 1, 1);
+    -fx-wrap-text: true;
+}
+.label{
+    -fx-wrap-text: true;
+}
+
+                                        /* Styles for answers */
+#correct-answer{
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+#incorrect-answer{
+    -fx-text-fill: red;
+}
+
+                                            /* Table view*/
+
+/* Row hovered, not selected; t. not focused */
+.table-view:row-selection .table-row-cell:filled:hover{
+    -fx-background-color: linear-gradient(rgba(186, 220, 255, 0.75) 0%, rgba(189, 202, 255, 0.76) 100%);
+
+}
+/* Row hovered, selected; t. not focused */
+.table-view:row-selection .table-row-cell:selected:hover{
+    -fx-background-color: linear-gradient(#2120ff 0%, #625cff 100%);
+    -fx-text-background-color: WHITE;
+}
+/* Row hovered, selected; t. focused*/
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    -fx-background-color: linear-gradient(#2120ff 0%, #625cff 100%);
+    -fx-text-background-color: WHITE;
+}
+/* Row selected, t. focused*/
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: linear-gradient(#2120ff 0%, #625cff 100%);
+    -fx-text-background-color: WHITE;
+}
+
+/* Row selected, t. not focused */
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: linear-gradient(#2120ff 0%, #625cff 100%);
+    -fx-text-background-color: WHITE;
+}
+/* Remove first item border before selection*/
+.table-view:focused .table-row-cell:focused {
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+}
+
+                                            /* Toolbar */
+.tool-bar {
+    -fx-background-color: linear-gradient(#ffffff 0%, #cbe4fa 100%);
+    -fx-spacing: 7;
+    -fx-padding: 6;
+}
+                                            /* Scroll pane */
+.scroll-pane{
+    -fx-background-color:transparent;
+}
+
+                                        /* Drag and drop styles */
+.to-drag{
+    -fx-border-color: BLACK;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    -fx-border-insets: 3;
+    -fx-background-color: WHITE;
+    -fx-background-radius: 3;
+    -fx-background-insets: 3;
+    -fx-padding: 3;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgba(32, 32, 32, 0.7), 4, 0, 2, 2);
+}
+.to-drop-on{
+    -fx-border-color: BLACK;
+    -fx-border-insets: 3;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    -fx-text-fill: BLACK;
+    -fx-border-style: DASHED;
+    -fx-padding: 3;
+    -fx-background-color: WHITE;
+    -fx-background-insets: 3;
+    -fx-background-radius: 3;
+}
+#to-drop-on-assigned{
+    -fx-background-color: GRAY;
+    -fx-background-insets: 3;
+    -fx-background-radius: 3;
+}
+
+.to-drag-unassigned{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ffffff, #d5d5d5);
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(32, 32, 32, 0.7), 10, 0, 3, 3);
+    -fx-border-radius: 10;
+    -fx-alignment: top-center;
+    -fx-padding: 5;
+}
+
+                                        /* Fix to blue borders around several panes*/
+
+.table-view:focused{
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 1;
+}
+
+.scroll-pane:focused{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 1;
+}
+
+.customDialog .content {
+    -fx-padding: 0 ;
+}
